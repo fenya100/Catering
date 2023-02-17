@@ -10,5 +10,10 @@ namespace WpfApp10.AppServices
     class FrameApp
     {
         public static Frame frmObj;
+
+        public static Button BtnCheck1;
+        public static Button BtnCheck2;
+        public static Button BtnCheck3;
+        public static Button BtnCheck4;
     }
 }

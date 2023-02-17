@@ -18,3 +18,12 @@ D:\Fenix\Catering\WpfApp10\obj\Debug\QuestPages\PageMenu.g.cs
 D:\Fenix\Catering\WpfApp10\obj\Debug\QuestPages\PageMenu.baml
 D:\Fenix\Catering\WpfApp10\obj\Debug\Admin\LoginAdmn.g.cs
 D:\Fenix\Catering\WpfApp10\obj\Debug\Admin\LoginAdmn.baml
+D:\Fenix\Catering\WpfApp10\bin\Debug\EntityFramework.dll
+D:\Fenix\Catering\WpfApp10\bin\Debug\EntityFramework.SqlServer.dll
+D:\Fenix\Catering\WpfApp10\bin\Debug\EntityFramework.xml
+D:\Fenix\Catering\WpfApp10\bin\Debug\EntityFramework.SqlServer.xml
+D:\Fenix\Catering\WpfApp10\bin\Debug\ru\EntityFramework.resources.dll
+D:\Fenix\Catering\WpfApp10\obj\Debug\QuestPages\Registration.g.cs
+D:\Fenix\Catering\WpfApp10\obj\Debug\WpfApp10_Content.g.cs
+D:\Fenix\Catering\WpfApp10\obj\Debug\QuestPages\Registration.baml
+D:\Fenix\Catering\WpfApp10\obj\Debug\WpfApp10.csproj.CopyComplete

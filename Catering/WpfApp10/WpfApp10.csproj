@@ -38,8 +38,17 @@
     <ApplicationIcon>Resources\christmas_2012_new_2857.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="QuestPages\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
     <Page Include="Admin\LoginAdmn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,12 +85,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AppServices\DbClass.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbClass.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppServices\DbClass.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppServices\DbClass.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbClass.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AppServices\DbConnect.cs" />
     <Compile Include="AppServices\FrameApp.cs" />
+    <Compile Include="AppServices\Role.cs">
+      <DependentUpon>DbClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppServices\User.cs">
+      <DependentUpon>DbClass.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="QuestPages\PageMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestPages\Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,6 +142,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="AppServices\DbClass.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DbClass.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AppServices\DbClass.edmx.diagram">
+      <DependentUpon>DbClass.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,6 +172,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\fotik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppServices\DbClass.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DbClass.Context.cs</LastGenOutput>
+      <DependentUpon>DbClass.edmx</DependentUpon>
+    </Content>
+    <Content Include="AppServices\DbClass.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbClass.edmx</DependentUpon>
+      <LastGenOutput>DbClass.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

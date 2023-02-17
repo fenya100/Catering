@@ -17,17 +17,19 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Введите логин:"
                            Width="150" />
-                <TextBox />
+                <TextBox Name="TxbLogin"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Введите пароль:"
                            Width="150" />
-                <TextBox />
+                <PasswordBox Name="PsbPassword"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Button Content="Войти" Style="{StaticResource AcceptButton}"/>
+                <Button Content="Войти" Style="{StaticResource AcceptButton}"
+                        Name="BtnLogin"
+                        Click="BtnLogin_Click"/>
 
             </StackPanel>
 
